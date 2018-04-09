@@ -18,8 +18,9 @@
 
 	<body style="width:1000px;margin:0 auto;">
 		<a href="#title" style="position:fixed;bottom:10px;margin-left:1020px;">Back to top</a>
-		<div style="text-align:center;line-height:100px;width:100%;font-size:58px;" id="title">Two Main Parties in HK Election</div>
-		<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">In the 2018 Hong Kong election... </div>
+		<div style="text-align:center;line-height:100px;width:100%;font-size:58px;" id="title">Pan-democrat VS Pro-establishment in HK By-election</div>
+		<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">On March 11, 2018 by-elections of Hong Kong Legislative Council was held. Considering the results of three geographical constituencies including Hong Kong Island, Kowloon West and New Territories East, it seems that for this year the competition between two main political fictions of pan-democrat and pro-establishment is intense and it could be a close election than ever.
+ </div>
 
 		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
 		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
@@ -44,8 +45,10 @@
 					<div style="text-align:left;line-height:50px;width:100%;font-size:36px;">xxx</div>
 
 					<div style="text-align:center;line-height:50px;width:100%;margin:10px 0;font-size:24px;">xxx</div>
-          <p style="text-align: center; "><img src="./Rplot-election results.png" style="width: 100%; " /></p>
-          <div style="text-align:center;line-height:25px;width:100%;margin:10px 0;">Results of each election station</div>
+					<div style="text-align:center;line-height:25px;width:100%;margin:0px 0;">Results of each election station</div>
+          <p style="text-align: center; "><img src="./Rplot-election results-01.png" style="width: 100%; " /></p>
+					<div style="text-align:center;line-height:25px;width:100%;margin:0px 0;">The Number of Stations Each Winner Won in Each Region</div>
+
 					<!--pie00-->
 					<div id="pie00" style="width: 100%;height:300px;"></div>
 
@@ -61,7 +64,7 @@
 										name: 'HKI',
 										type: 'pie',
 										radius : '40%',
-										center: ['25%', '50%'],
+										center: ['25%', '25%'],
 										stack: '总量',
 										label:{
 												normal: {
@@ -93,7 +96,7 @@
 														name: 'NT',
 														type: 'pie',
 														radius : '40%',
-														center: ['75%', '50%'],
+														center: ['75%', '75%'],
 														stack: '总量',
 														label:{
 																normal: {
@@ -109,11 +112,12 @@
 					// 使用刚指定的配置项和数据显示图表。
 					myChart.setOption(option);
 					</script>
-					<div style="text-align:center;line-height:25px;width:100%;margin:10px 0;">The Number of Stations Each Winner Won</div>
 					<div style="text-align:center;line-height:50px;width:100%;margin:10px 0;font-size:24px;">xxx</div>
 
 					<div style="text-align:left;line-height:50px;width:100%;font-size:22px;">xxx</div>
-					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;"> Explain......</div>
+					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;"> After indicating the winning candidate of each voting station located on the map, seen two colors in all constituencies, it is clear that in each geographical constituency stations are divided up by two political fictions. Especially in Kowloon West, within the collected data shown on the map, Candidate Vincent from pro-establishment was elected with winning in 39 voting stations while pan-democrat candidate Yiu won for 33 stations, which was quite close to each other. This also indicates the highlight of this election that the pan-democrat is losing the monopoly and is less predominant than before.
+
+</div>
 
 					<div style="text-align:left;line-height:50px;width:100%;font-size:22px;">xxx</div>
 					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">Explain</div>
