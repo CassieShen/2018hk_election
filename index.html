@@ -46,7 +46,70 @@
 					<div style="text-align:center;line-height:50px;width:100%;margin:10px 0;font-size:24px;">xxx</div>
           <p style="text-align: center; "><img src="./Rplot-election results.png" style="width: 100%; " /></p>
           <div style="text-align:center;line-height:25px;width:100%;margin:10px 0;">Results of each election station</div>
+					<!--pie00-->
+					<div id="pie00" style="width: 100%;height:300px;"></div>
 
+					<script type="text/javascript">
+							// 基于准备好的dom，初始化echarts实例
+							var myChart = echarts.init(document.getElementById('pie00'));
+
+							option = {
+
+							series: [
+
+								{
+										name: 'HKI',
+										type: 'pie',
+										radius : '40%',
+										center: ['25%', '50%'],
+										stack: '总量',
+										label:{
+												normal: {
+														show: true,
+														position: 'insideRight'
+												}
+										},
+										data: [{value:66, name:'HKI-Au Nok Hin: 66'},
+												{value:35, name:'HKI-Chan Judy Kapui: 35'},]
+								},
+								{
+										name: 'KL',
+										type: 'pie',
+										radius : '40%',
+										center: ['50%', '50%'],
+										stack: '总量',
+										label:{
+												normal: {
+														show: true,
+														position: 'insideRight'
+												}
+										},
+										data: [{value:39 , name:'KL-Cheng Wing Shun Vincent: 39'},
+												{value:33 , name:'KL-Yiu Chung Yim: 33 '}
+												]
+								},
+
+												{
+														name: 'NT',
+														type: 'pie',
+														radius : '40%',
+														center: ['75%', '50%'],
+														stack: '总量',
+														label:{
+																normal: {
+																		show: true,
+																		position: 'insideRight'
+																}
+														},
+														data: [{value:90, name:'NT-Fan Gary Kwok Wai: 90'},
+																{value:51, name:'NT-Tang Ka Piu: 51'}]
+												}
+							]
+					};
+					// 使用刚指定的配置项和数据显示图表。
+					myChart.setOption(option);
+					</script>
+					<div style="text-align:center;line-height:25px;width:100%;margin:10px 0;">The Number of Stations Each Winner Won</div>
 					<div style="text-align:center;line-height:50px;width:100%;margin:10px 0;font-size:24px;">xxx</div>
 
 					<div style="text-align:left;line-height:50px;width:100%;font-size:22px;">xxx</div>
