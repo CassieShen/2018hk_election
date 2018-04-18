@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- 引入 ECharts 文件 -->
+	<script src="echarts.min.js"></script>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<style>
+		#scatter div {
+			width: 1000px!important;
+		}
+	</style>
+</head>
+<body>
+
+	<body style="width:1000px;margin:0 auto;">
+		<a href="#title" style="position:fixed;bottom:10px;margin-left:1020px;">Back to top</a>
+		<div style="text-align:center;line-height:100px;width:100%;font-size:58px;" id="title">Pan-democrat VS Pro-establishment in HK By-election</div>
+		<div style="text-align:left;line-height:50px;width:100%;font-size:22px;">On March 11, 2018 by-elections of Hong Kong Legislative Council was held. Considering the results of three geographical constituencies including Hong Kong Island, Kowloon West and New Territories East, it seems that for this year the competition between two main political fictions of pan-democrat and pro-establishment is intense and it could be a close election than ever.
+ </div>
+
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+		<div id="myTabs">
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Winner of each election station</a></li>
+				</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home" style="padding-bottom: 15px;border-bottom: 2px solid gray;">
+					<div style="text-align:center;line-height:50px;width:100%;margin:10px 0;font-size:24px;">Results of each election station</div>
+          <p style="text-align: center; "><img src="./Rplot-election results-01.png" style="width: 100%; " /></p>
+					<div style="text-align:center;line-height:25px;width:100%;margin:0px 0;">The Number of Stations Each Winner Won in Each Region</div>
+
+					<!--pie00-->
+					<div id="pie00" style="width: 100%;height:300px;"></div>
+
+					<script type="text/javascript">
+							// 基于准备好的dom，初始化echarts实例
+							var myChart = echarts.init(document.getElementById('pie00'));
+
+							option = {
+
+							series: [
+
+								{
+										name: 'HKI',
+										type: 'pie',
+										radius : '40%',
+										center: ['25%', '25%'],
+										stack: '总量',
+										label:{
+												normal: {
+														show: true,
+														position: 'insideRight'
+												}
+										},
+										data: [{value:66, name:'HKI-Au Nok Hin: 66'},
+												{value:35, name:'HKI-Chan Judy Kapui: 35'},]
+								},
+								{
+										name: 'KL',
+										type: 'pie',
+										radius : '40%',
+										center: ['50%', '50%'],
+										stack: '总量',
+										label:{
+												normal: {
+														show: true,
+														position: 'insideRight'
+												}
+										},
+										data: [{value:39 , name:'KL-Cheng Wing Shun Vincent: 39'},
+												{value:33 , name:'KL-Yiu Chung Yim: 33 '}
+												]
+								},
+
+												{
+														name: 'NT',
+														type: 'pie',
+														radius : '40%',
+														center: ['75%', '75%'],
+														stack: '总量',
+														label:{
+																normal: {
+																		show: true,
+																		position: 'insideRight'
+																}
+														},
+														data: [{value:90, name:'NT-Fan Gary Kwok Wai: 90'},
+																{value:51, name:'NT-Tang Ka Piu: 51'}]
+												}
+							]
+					};
+					// 使用刚指定的配置项和数据显示图表。
+					myChart.setOption(option);
+					</script>
+
+					<div style="text-align:left;line-height:50px;width:100%;font-size:36px;">Close Competition -- pan-democrat is losing the monopoly</div>
+					<div style="text-align:left;line-height:50px;width:100%;font-size:22px;"> After indicating the winning candidate of each voting station located on the map, seen two colors in all constituencies, it is clear that in each geographical constituency stations are divided up by two political fictions. Especially in Kowloon West, within the collected data shown on the map, Candidate Vincent from pro-establishment was elected with winning in 39 voting stations while pan-democrat candidate Yiu won for 33 stations, which was quite close to each other. This also indicates the highlight of this election that the pan-democrat is losing the monopoly and is less predominant than before.
+
+</div>
+
+
+				</div>
+
+
+								</div>
+
+							</div>
+							<script>
+										$('#myTabs a').click(function (e) {
+											e.preventDefault()
+											$(this).tab('show')
+										})
+							</script>
+
+			<div style="text-align:right;line-height:25px;width:100%;margin:10px 0;font-size:16px;">By Cassie Shen Yue</div>
+
+
+
+</body>
+
+</html>
